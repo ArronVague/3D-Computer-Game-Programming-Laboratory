@@ -14,4 +14,4 @@
 
 阅读官方的开发文档可以帮助用户快速实现创意，创造价值
 
-![doc](D:\Desktop\3-d-computer-game-programming-laboratory\lab1\screenshot\Screenshot%202023-09-01%20155322.png)
+![doc](lab1/screenshot/Screenshot%202023-09-01%20155322.png)
