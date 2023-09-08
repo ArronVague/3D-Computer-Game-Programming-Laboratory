@@ -78,7 +78,7 @@
 
 ![](screenshot/碰撞消失.png)
 
-### 添加血量机制（增强分）
+### 添加血量机制
 
 #### 素材导入与血量状态
 
@@ -123,3 +123,5 @@
 ![](screenshot/雷霆战机Ultra.png)
 
 ## 4、视频演示（博客分享）
+
+[《雷 霆 战 机 Ultra》](https://www.bilibili.com/video/BV18H4y1X72g/?vd_source=212ff176b778171e26249f81cfb5bdbc)
