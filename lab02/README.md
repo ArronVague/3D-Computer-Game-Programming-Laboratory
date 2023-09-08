@@ -1,29 +1,13 @@
-<title>Markmap</title>
-<style>
-* {
- margin: 0;
- padding: 0;
-}
-#mindmap {
- display: block;
- width: 100vw;
- height: 100vh;
-}
-</style> <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.3/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.3/dist/index.js"></script><script>(r => {
- setTimeout(r);
- })(() => {
- const {
- markmap,
- mm
- } = window;
- const {
- el
- } = markmap.Toolbar.create(mm);
- el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
- document.body.append(el);
-})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
- const markmap = getMarkmap();
- window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
- })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"markmap","children":[{"type":"heading","depth":1,"payload":{"lines":[2,3]},"content":"游戏创意","children":[]}]},{})</script>
+### 思维导图
+
+使用思维导图来可视化项目结构和概念。
+
+<iframe src="/path/to/your/markmap.html" width="100%" height="500px"></iframe>
+
+### 思维导图
+
+使用思维导图来可视化项目结构和概念。
+
+<iframe src="test.html" width="100%" height="500px"></iframe>
 
 
