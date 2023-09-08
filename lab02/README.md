@@ -10,4 +10,6 @@
 
 <iframe src="./mindmap/test.html" width="100%" height="500px"></iframe>
 
+![](mindmap/markmap.svg)
+
 
