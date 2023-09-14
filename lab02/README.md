@@ -1,12 +1,12 @@
 # lab02-小组策划
 
-[思维导图 | test](https://arronvague.github.io/test/)[思维导图 | test](https://arronvague.github.io/test/)
+[思维导图](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory)
 
 ## 1、实验/学习工具
 
 ## 2、实验步骤
 
-# 3、实验结果
+## 3、实验结果
 
 小组选题：
 
