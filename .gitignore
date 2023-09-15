@@ -70,6 +70,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-lab03/Library/
-lab03/.vs/
-lab03/*vs/
+lab03/**/Library/
+lab03/**/.vs/
+lab03/**/*.sln
