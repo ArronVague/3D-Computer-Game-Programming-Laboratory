@@ -24,9 +24,7 @@
 
 ## 3、实验结果
 
-### 思维导图
-
-[mindmap](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory)
+### [思维导图](https://arron_vague.gitee.io/3-d-computer-game-programming-laboratory)
 
 ### 主要任务
 
