@@ -1,7 +1,5 @@
 # lab02-小组策划
 
-[思维导图](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory)
-
 ## 1、实验/学习工具
 
 - 思维导图是头脑风暴、民主决策、会议记录、项目管理的重要工具。
@@ -27,6 +25,8 @@
 ## 3、实验结果
 
 ### 思维导图
+
+[mindmap](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory)
 
 ### 主要任务
 
