@@ -22,13 +22,15 @@
 
 3. 撰写博客
 
-## 3、实验结果
+## 3、实验结果（博客分享）
 
-### [思维导图](https://arronvague.github.io/3D-Computer-Game-Programming-Laboratory/lab02/mindmap/mindmap.html)
+### [思维导图](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory/lab02/mindmap/mindmap.html)（基础分）
 
 ### 主要任务
 
-### 案例分析——第2章 游戏的结构
+以**植物大战僵尸**为案例游戏，对《游戏设计梦工厂》中的第2章——**游戏的结构**进行案例分析。选取练习2.1、2.2、2.3、2.4、2.5和2.6作为组合，并根据自身情况加以改编，反映**植物大战僵尸**的多个设计要点。
+
+### 案例分析——第2章 游戏的结构（增强分）
 
 > 阅读 Tracy Fullerton, *GAME DESIGN WORKSHOP* 第2-4章（游戏结构、基本元素、戏剧元素）。选择一款你喜欢的中等规模游戏如“植物大战僵尸”为案例，根据教材中一个或一组练习要求，回答该游戏的分析与设计问题。
 
@@ -43,16 +45,6 @@ pvz的冒险模式已经是耳熟能详，这里就不过多赘述。本文会�
 场地术语
 
 ![](pic/background.png)
-
-##### 文章引用
-
-[无尽模式新手入门教程](https://tieba.baidu.com/p/5194693832)
-
-[新轨道读本](https://forum.crescb.com/se-general/%e6%89%8b%e6%92%95%e8%bd%a8%e9%81%93%e8%af%bb%e6%9c%ac/#post-1219)
-
-[【Kaleidoscope of Endless Build Culture】九章阵华录](https://tieba.baidu.com/p/5272254427?p_tk=6473rvfb9t1InQ0oS%2BTuf80H9oiCVquEo9czOU4%2FPS7BarOLhpnQtTCbdDyFE9BC4CKW2PEy1aRY87ww6Wv0rWyi6SRJV9bGXkIBxclfTP9BPX1zllZ2Hpn4OsPS2QqDhR%2FfBqjxkAUl2BJAatNDT5%2FQSgRPd5XcXbSpM2v%2Bz5WTCbo%3D&p_timestamp=1694954015&p_sign=11fdeef260056303605d03e2795db2e8&p_signature=11fdeef260056303605d03e2795db2e8&__pc2ps_ab=6473rvfb9t1InQ0oS%2BTuf80H9oiCVquEo9czOU4%2FPS7BarOLhpnQtTCbdDyFE9BC4CKW2PEy1aRY87ww6Wv0rWyi6SRJV9bGXkIBxclfTP9BPX1zllZ2Hpn4OsPS2QqDhR%2FfBqjxkAUl2BJAatNDT5%2FQSgRPd5XcXbSpM2v%2Bz5WTCbo%3D|1694954015|11fdeef260056303605d03e2795db2e8|11fdeef260056303605d03e2795db2e8&red_tag=2016088609)
-
-[PVZ造型读本](https://tieba.baidu.com/p/7135037490)
 
 #### 练习2.1：想一个游戏
 
@@ -267,3 +259,13 @@ pvz生存模式，玩家的目标是尽可能地抵御僵尸的进攻，生存�
 “节气周转，岁月如歌。植物大战僵尸，这样一个貌不惊人的单机小游戏，诞生伊始，便已注定了，它的不凡，一代代玩家鞠躬尽瘁的投入，夜以继日的钻研，精益求精的雕琢，成就了，它昔日的风采与辉煌，时光在苒，矫首回望，已逾十载。捧淡茶一盏，聆琴音翩然，翻开历史的卷宗，慨叹之余，更寄托了，一份敬意，收获了，一份感动。数年以来，随着游戏科技的不断发展，全场地无尽生存，早已不再是一道无法逾越的天堑，游戏阵型，玩法，可谓以技术为武器，百花齐放，争奇斗艳，一派繁荣之景，渐入眼帘，而主打视觉美学的造型阵，亦应运而生，逐渐成为了独立于技术之外的一种别样的游戏玩法，成长为植吧文化的一部分。“
 
 ——宿命的刚翼
+
+### 文章引用
+
+[无尽模式新手入门教程](https://tieba.baidu.com/p/5194693832)
+
+[新轨道读本](https://forum.crescb.com/se-general/%e6%89%8b%e6%92%95%e8%bd%a8%e9%81%93%e8%af%bb%e6%9c%ac/#post-1219)
+
+[【Kaleidoscope of Endless Build Culture】九章阵华录](https://tieba.baidu.com/p/5272254427?p_tk=6473rvfb9t1InQ0oS%2BTuf80H9oiCVquEo9czOU4%2FPS7BarOLhpnQtTCbdDyFE9BC4CKW2PEy1aRY87ww6Wv0rWyi6SRJV9bGXkIBxclfTP9BPX1zllZ2Hpn4OsPS2QqDhR%2FfBqjxkAUl2BJAatNDT5%2FQSgRPd5XcXbSpM2v%2Bz5WTCbo%3D&p_timestamp=1694954015&p_sign=11fdeef260056303605d03e2795db2e8&p_signature=11fdeef260056303605d03e2795db2e8&__pc2ps_ab=6473rvfb9t1InQ0oS%2BTuf80H9oiCVquEo9czOU4%2FPS7BarOLhpnQtTCbdDyFE9BC4CKW2PEy1aRY87ww6Wv0rWyi6SRJV9bGXkIBxclfTP9BPX1zllZ2Hpn4OsPS2QqDhR%2FfBqjxkAUl2BJAatNDT5%2FQSgRPd5XcXbSpM2v%2Bz5WTCbo%3D%7C1694954015%7C11fdeef260056303605d03e2795db2e8%7C11fdeef260056303605d03e2795db2e8&red_tag=2016088609)
+
+[PVZ造型读本](https://tieba.baidu.com/p/7135037490)
