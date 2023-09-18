@@ -26,6 +26,10 @@
 
 ### [思维导图](http://arron_vague.gitee.io/3-d-computer-game-programming-laboratory/lab02/mindmap/mindmap.html)（基础分）
 
+**↑**点击查看大图
+
+![](pic/mindmap.png)
+
 ### 主要任务
 
 以**植物大战僵尸**为案例游戏，对《游戏设计梦工厂》中的第2章——**游戏的结构**进行案例分析。选取练习2.1、2.2、2.3、2.4、2.5和2.6作为组合，并根据自身情况加以改编，反映**植物大战僵尸**的多个设计要点。
