@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Calculator : MonoBehaviour
 {
+    // Entities and their states / Model
+    // 模型只能包含游戏对象数据
     private string expression;
     private char[,] keyboard = { { 'C', 'X', '%', '÷' }, { '7', '8', '9', '×' }, { '4', '5', '6', '-' }, { '1', '2', '3', '+' }, { 'e', '0', '.', '=' } };
     private Stack<int> num = new Stack<int>();
     private char preSign;
     private int init_num;
     private string result;
-    // Start is called before the first frame update
+
+    // System Handlers
     void Start()
     {
         Init();
     }
 
+    // View render entities / models
+    // Here! you cannot modify model directly, use components/controls to do it
     void OnGUI()
     {
         GUI.Box(new Rect(245, 5, 300, 500), "");
@@ -43,16 +48,21 @@ public class Calculator : MonoBehaviour
         }
     }
 
+    // Components
+    // here! any ui can not be referenced
+    // 模型对象（数据）的基本操作逻辑
     void Init()
     {
         Clear();
     }
 
+    // 输入表达式
     void Input(char cur_c)
     {
         expression += cur_c;   
     }
 
+    // 通过表达式计算结果
     void Calculate()
     {
         int n = expression.Length;
@@ -72,7 +82,7 @@ public class Calculator : MonoBehaviour
                     case '-':
                         num.Push(-init_num);
                         break;
-                    case '*':
+                    case '×':
                         num.Push(num.Pop() * init_num);
                         break;
                     default:
@@ -91,6 +101,7 @@ public class Calculator : MonoBehaviour
         result = res.ToString();
     }
 
+    // 重置变量和数据结构
     void Clear()
     {
         num.Clear();
