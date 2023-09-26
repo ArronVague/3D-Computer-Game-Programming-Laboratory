@@ -72,6 +72,9 @@ crashlytics-build.properties
 
 **/Library
 **/.vs/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
 
 lab03/Library/
 lab03/.vs/
