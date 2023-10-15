@@ -121,6 +121,8 @@
 
 Empty（GameObject）挂载了FirstController.cs脚本
 
+![](pic/empty.png)
+
 ### 使用MVC结构
 
 ```powershell
@@ -198,5 +200,3 @@ Empty（GameObject）挂载了FirstController.cs脚本
 引用
 
 [Unity3D小游戏——牧师与魔鬼 - LoongChan - 博客园](https://www.cnblogs.com/LC32/p/15420714.html)
-
-
