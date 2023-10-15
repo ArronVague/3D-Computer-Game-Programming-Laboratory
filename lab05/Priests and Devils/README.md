@@ -10,6 +10,10 @@
 
 ![](pic/game.png)
 
+### 视频演示
+
+[牧师与魔鬼 说了再见版](https://www.bilibili.com/video/BV19N4y1y7bi/)
+
 ### 游戏中提及的事物
 
 #### boat（船）
@@ -197,6 +201,6 @@ Empty（GameObject）挂载了FirstController.cs脚本
 
 ![](pic/UML.png)
 
-引用
+## 文章引用
 
 [Unity3D小游戏——牧师与魔鬼 - LoongChan - 博客园](https://www.cnblogs.com/LC32/p/15420714.html)
