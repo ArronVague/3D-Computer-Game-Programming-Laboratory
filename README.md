@@ -6,6 +6,8 @@
 
 ## [lab03-游戏循环和mvc结构](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab03)
 
+## [lab05-创建游戏世界1](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab05/Priests%20and%20Devils)
+
 ## 考试（可能）
 
 - 画砖墙
