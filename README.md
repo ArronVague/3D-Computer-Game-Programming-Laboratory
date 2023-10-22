@@ -8,6 +8,8 @@
 
 ## [lab05-创建游戏世界1](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab05/Priests%20and%20Devils)
 
+## [lab06-创建游戏世界2](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
+
 ## 考试（可能）
 
 - 画砖墙
