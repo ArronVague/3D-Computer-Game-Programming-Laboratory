@@ -1,3 +1,5 @@
+# lab06-创建游戏世界2
+
 去掉了model.move
 
 不再需要MoveController
