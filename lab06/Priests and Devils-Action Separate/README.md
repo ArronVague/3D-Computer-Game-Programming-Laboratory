@@ -1,0 +1,23 @@
+去掉了model.move
+
+不再需要MoveController
+
+迁移到Action.Move
+
+将FirstController中的MoveRole和MoveBoat迁移到CCActionManager
+
+将MoveController中的IsMoving迁移到CCActionManager
+
+
+
+增加controller.judgeController
+
+将判断游戏状态的代码从FirstController迁移到judgeController
+
+
+
+FirstController中将movectrl替换成 action 和 judge
+
+船和角色的移动也通过move执行
+
+
