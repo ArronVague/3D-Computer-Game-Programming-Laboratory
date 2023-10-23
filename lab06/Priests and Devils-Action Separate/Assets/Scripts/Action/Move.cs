@@ -35,6 +35,7 @@ public class Move : MonoBehaviour
         } 
         if (!initialized)
         {
+            /*如果moveMode为single，则desseq数组长度为1，将目标位置destination赋值给desseq[0]；如果moveMode为sequence，则desseq数组长度为3，分别将当前位置(transform.localPosition)和目标位置(destination)在Y轴上升高1个单位后赋值给desseq[0]和desseq[1]，并将目标位置destination赋值给desseq[2]。*/
             if (moveMode == single)
             {
                 desseq = new Vector3[1];
@@ -54,6 +55,7 @@ public class Move : MonoBehaviour
             initialized = true;
         }
         isMoving = true;
+        /*如果n_seq大于等于desseq数组的长度，表示已经完成了所有的移动序列，将一些变量重置为默认值，并将isMoving设置为false，然后返回。*/
         if (n_seq >= desseq.Length)
         {
             n_seq = 0;
@@ -62,6 +64,7 @@ public class Move : MonoBehaviour
             isMoving = false;
             return;
         }
+        /*如果当前位置(transform.localPosition)与desseq[n_seq]相等，则表示已经到达当前目标位置，将n_seq加1，表示切换到下一个目标位置。*/
         if (transform.localPosition == desseq[n_seq])
         {
             n_seq++;

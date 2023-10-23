@@ -59,6 +59,7 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction
         LandCtrl[1] = new LandController(RIGHTLAND, rolesID);
         LandCtrl[0].CreateModel();
         LandCtrl[1].CreateModel();
+
         JudgeCtrl = new JudgeController();
 
         actionManager = new CCActionManager();
