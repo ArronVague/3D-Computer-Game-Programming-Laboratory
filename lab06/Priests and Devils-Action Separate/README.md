@@ -57,7 +57,6 @@ public class JudgeController
         return FirstController.WIN;
     }
 }
-
 ```
 
 通过变量`gameState`通知场景控制器是否结束游戏。
@@ -267,8 +266,6 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction
 
     ...
 }
-
-
 ```
 
 `FirstController.MoveController`替换成`FirstController.CCActionManager`，由动作管理类负责管理动作。
@@ -307,7 +304,7 @@ MVC模式
 
 ## UML图
 
-
+![](pic/UML.drawio.png)
 
 ## 文章引用
 
