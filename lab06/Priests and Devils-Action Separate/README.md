@@ -304,6 +304,8 @@ MVC模式
 
 ## UML图
 
+![](pic/UML.drawio.png)
+
 ## 文章引用
 
 [Unity3D小游戏——牧师与魔鬼（动作分离版） - LoongChan - 博客园](https://www.cnblogs.com/LC32/p/15424201.html)
