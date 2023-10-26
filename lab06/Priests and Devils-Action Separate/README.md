@@ -16,7 +16,7 @@
 
 ![](pic/game.png)
 
-[牧师与魔鬼 说了再见版](https://www.bilibili.com/video/BV19N4y1y7bi/)
+[牧师与魔鬼 动作分离版](https://www.bilibili.com/video/BV1aN4y1k791/?vd_source=212ff176b778171e26249f81cfb5bdbc)
 
 ### 添加裁判类
 
@@ -57,7 +57,6 @@ public class JudgeController
         return FirstController.WIN;
     }
 }
-
 ```
 
 通过变量`gameState`通知场景控制器是否结束游戏。
@@ -267,8 +266,6 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction
 
     ...
 }
-
-
 ```
 
 `FirstController.MoveController`替换成`FirstController.CCActionManager`，由动作管理类负责管理动作。
@@ -307,10 +304,6 @@ MVC模式
 
 ## UML图
 
-
-
 ## 文章引用
 
 [Unity3D小游戏——牧师与魔鬼（动作分离版） - LoongChan - 博客园](https://www.cnblogs.com/LC32/p/15424201.html)
-
-
