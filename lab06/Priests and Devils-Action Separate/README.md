@@ -16,6 +16,8 @@
 
 ![](pic/game.png)
 
+点击观看视频👇
+
 [牧师与魔鬼 动作分离版](https://www.bilibili.com/video/BV1aN4y1k791/?vd_source=212ff176b778171e26249f81cfb5bdbc)
 
 ### 添加裁判类
