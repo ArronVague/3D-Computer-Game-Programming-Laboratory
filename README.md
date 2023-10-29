@@ -1,14 +1,14 @@
 # 3D游戏编程与设计
 
-## [lab01-让非专业人士制作游戏](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab01)
+## [lab01-让非专业人士制作游戏](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab01)
 
-## [lab02-小组策划](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab02)
+## [lab02-小组策划](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab02)
 
-## [lab03-游戏循环和mvc结构](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab03)
+## [lab03-游戏循环和mvc结构](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab03)
 
-## [lab05-创建游戏世界1](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab05/Priests%20and%20Devils)
+## [lab05-创建游戏世界1](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab05/Priests%20and%20Devils)
 
-## [lab06-创建游戏世界2](https://gitee.com/Arron_Vague/3-d-computer-game-programming-laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
+## [lab06-创建游戏世界2](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
 
 ## [lab08-物理引擎与碰撞1]()
 
