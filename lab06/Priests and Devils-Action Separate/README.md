@@ -1,6 +1,6 @@
 # lab06-创建游戏世界2
 
-以下内容与原版无异，详情可查看[牧师与魔鬼 原版](../../lab05/Priests and Devils/README.md)
+以下内容与原版无异，详情可查看[牧师与魔鬼 原版](../../lab05/Priests%20and%20Devils/README.md)
 
 - 游戏中提及的事物
 
