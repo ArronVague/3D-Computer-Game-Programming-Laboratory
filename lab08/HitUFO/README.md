@@ -25,3 +25,17 @@
 参考文献
 
 [Unity3D小游戏——打飞碟](https://www.cnblogs.com/LC32/p/15469806.html)
+
+SceneController开始游戏时会实例化UFOFactory，并交给UFOFactory初始化UFO池。且这个函数每一轮游戏都要用到。
+
+每一轮游戏开始前必做：
+
+- 更新游戏难度
+
+- 初始化UFO池
+
+UFO实例化时会挂载Click.cs
+
+UFO一开始设置为不可见。
+
+Click.cs用来控制UFO被点击时触发的效果
