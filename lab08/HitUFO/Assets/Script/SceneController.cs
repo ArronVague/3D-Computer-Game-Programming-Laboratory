@@ -12,15 +12,15 @@ public class SceneController : MonoBehaviour
     public bool isFailed;
     public int currentDifficulty;
 
-    GameObject fatory;
+    GameObject factory;
 
     public void Awake(){
         Director director = Director.GetInstance();
         director.CurrentSceneController = this;
         director.CurrentSceneController.Initialize();
-        fatory = new GameObject("UFO fatory");
-        fatory.AddComponent<UFOFatory>();
-        fatory.GetComponent<UFOFatory>().SetDepend(this);
+        factory = new GameObject("UFO factory");
+        factory.AddComponent<UFOFactory>();
+        factory.GetComponent<UFOFactory>().SetDepend(this);
     }
 
     //对场景参数进行初始化
@@ -45,7 +45,7 @@ public class SceneController : MonoBehaviour
         }
         if(blood == 0){
             isFailed = true;
-            fatory.GetComponent<UFOFatory>().InitializeUFO();
+            factory.GetComponent<UFOFactory>().InitializeUFO();
             isStart = false;
         }
     }
@@ -59,9 +59,9 @@ public class SceneController : MonoBehaviour
 
     //开始一轮抛掷飞碟（10个）
     public void StartRound(){
-        fatory.GetComponent<UFOFatory>().SetDifficulty(currentDifficulty);
-        fatory.GetComponent<UFOFatory>().InitializeUFO();
-        fatory.GetComponent<UFOFatory>().StartRound();
+        factory.GetComponent<UFOFactory>().SetDifficulty(currentDifficulty);
+        factory.GetComponent<UFOFactory>().InitializeUFO();
+        factory.GetComponent<UFOFactory>().StartRound();
     }
 
     //当一轮游戏结束，通知开始下一轮游戏
