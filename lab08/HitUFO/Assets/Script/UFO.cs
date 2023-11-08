@@ -45,4 +45,10 @@ public class UFO
         this.isOver = true;
         myFactory.ClickUFO(this.id);
     }
+
+    public void Fail()
+    {
+        this.isOver = true;
+        myFactory.FailUFO(this.id);
+    }
 }
