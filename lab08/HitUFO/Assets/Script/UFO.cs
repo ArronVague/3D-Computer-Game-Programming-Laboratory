@@ -19,6 +19,7 @@ public class UFO
         ufoObject.AddComponent<Click>();
         ufoObject.GetComponent<Click>().SetDepend(this);
         ufoObject.AddComponent<MoveOut>();
+        ufoObject.GetComponent<MoveOut>().SetDepend(this);
     }
 
     public void SetUFOActive(bool active)

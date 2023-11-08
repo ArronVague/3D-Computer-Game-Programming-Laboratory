@@ -38,7 +38,7 @@ public class SceneController : MonoBehaviour
         score += 1;
     }
 
-    //试去一个飞碟时触发减分
+    // UFO飞出窗口时触发减分
     public void SubBlood(){
         if(blood > 0){
             blood -= 1;
@@ -56,6 +56,13 @@ public class SceneController : MonoBehaviour
         isStart = true;
         StartRound();
     } 
+
+    public void EndGame()
+    {
+        isStart = false;
+        isFailed = true;
+        factory.GetComponent<UFOFactory>().InitializeUFO();
+    }
 
     //开始一轮抛掷飞碟（10个）
     public void StartRound(){
