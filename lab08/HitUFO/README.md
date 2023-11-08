@@ -34,8 +34,9 @@ SceneController开始游戏时会实例化UFOFactory，并交给UFOFactory初始
 
 - 初始化UFO池
 
-UFO实例化时会挂载Click.cs
+UFO实例化时会挂载Click.cs以及MoveOut.cs
 
 UFO一开始设置为不可见。
 
-Click.cs用来控制UFO被点击时触发的效果
+Click.cs用来控制UFO被点击时触发的效果，MoveOut.cs用来控制UFO飞出窗口的触发效果
+

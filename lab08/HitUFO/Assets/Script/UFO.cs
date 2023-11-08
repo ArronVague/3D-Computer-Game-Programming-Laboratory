@@ -18,6 +18,7 @@ public class UFO
         ufoObject = GameObject.Instantiate(Resources.Load("Prefabs/UFO", typeof(GameObject))) as GameObject;
         ufoObject.AddComponent<Click>();
         ufoObject.GetComponent<Click>().SetDepend(this);
+        ufoObject.AddComponent<MoveOut>();
     }
 
     public void SetUFOActive(bool active)
