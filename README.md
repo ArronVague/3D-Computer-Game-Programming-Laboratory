@@ -10,7 +10,7 @@
 
 ## [lab06-创建游戏世界2](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
 
-## [lab08-物理引擎与碰撞1](lab08/HitUFO/README.md)
+## [lab08-物理引擎与碰撞1](lab08/HitUFO)
 
 ## 考试（可能）
 
