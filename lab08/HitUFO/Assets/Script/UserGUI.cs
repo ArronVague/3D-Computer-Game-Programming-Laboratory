@@ -31,25 +31,6 @@ public class UserGUI : MonoBehaviour
         bloodText = $"Blood: {CurrentSceneController.blood}";
         scoreText = $"Score: {CurrentSceneController.score}";
 
-        // GUI.enabled = !CurrentSceneController.isStart;
-/*        hideRestart = !CurrentSceneController.isStart;
-        
-        if (hideRestart)
-        {
-            if (GUI.Button(new Rect(Screen.width * 0.75f, Screen.height * 0.85f, Screen.width * 0.2f, Screen.height * 0.1f), "Start"))
-            {
-                CurrentSceneController.StartNewGame();
-            }
-
-        }
-        else
-        {
-            // 重新开始的按钮
-            if (GUI.Button(new Rect(Screen.width * 0.75f, Screen.height * 0.85f, Screen.width * 0.2f, Screen.height * 0.1f), "Restart"))
-            {
-                CurrentSceneController.StartNewGame();
-            }
-        }*/
         if (CurrentSceneController.isStart)
         {
             if (GUI.Button(new Rect(Screen.width * 0.75f, Screen.height * 0.85f, Screen.width * 0.2f, Screen.height * 0.1f), "End"))
