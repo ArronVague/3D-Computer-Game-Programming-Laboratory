@@ -7,9 +7,9 @@ using UnityEngine.UIElements;
 public class UFOFactory : MonoBehaviour
 {
     public int difficulty;
-    public static int trial = 10;
     Coroutine mCoroutine = null; // 协程
-    UFO[] UFOs = new UFO[trial];
+    public UFO[] UFOs;
+    public int trial;
     public SceneController myController;
     public static Color[] colors = new Color[5] { Color.red, Color.black, Color.blue, Color.green, Color.yellow };
     public static float[] scales = new float[5] { 0.6f, 0.8f, 1.0f, 1.2f, 1.4f };
@@ -17,10 +17,13 @@ public class UFOFactory : MonoBehaviour
     public static float[] x_position = new float[2] { -13f, 13f };
     public static float[] x_force = new float[8] { 10f, 12.5f, 15f, 20f, -10f, -12.5f, -15f, -20f };
 
+
     // 设定飞碟工厂的上游场景控制器
     public void SetDepend(SceneController firstCtrl)
     {
         this.myController = firstCtrl;
+        trial = myController.CharDataModel.Attributes.UFOs_per_round;
+        UFOs = new UFO[trial];
     }
 
 

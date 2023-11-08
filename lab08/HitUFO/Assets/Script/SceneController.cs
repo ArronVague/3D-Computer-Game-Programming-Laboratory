@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-
+    public CharacterItem CharDataModel;
     public int round;
     public int score;
     public int blood;
@@ -25,10 +25,26 @@ public class SceneController : MonoBehaviour
 
     //对场景参数进行初始化
     public void Initialize(){
+/*        if (CharDataModel != null)
+        {
+            // 访问CharacterItem对象的属性
+            int round = CharDataModel.Attributes.round;
+            int blood = CharDataModel.Attributes.blood;
+            int currentDifficulty = CharDataModel.Attributes.initial_difficulty;
+
+            // 在控制台输出属性值进行验证
+            Debug.Log("Round: " + round);
+            Debug.Log("Blood: " + blood);
+            Debug.Log("Current Difficulty: " + currentDifficulty);
+        }
+        else
+        {
+            Debug.LogError("CharDataModel is not assigned!");
+        }*/
         round = 1;
         score = 0;
-        blood = 10;
-        currentDifficulty = 0;
+        blood = CharDataModel.Attributes.blood;
+        currentDifficulty = CharDataModel.Attributes.initial_difficulty;
         isStart = false;
         isFailed = false;
     }
@@ -54,6 +70,7 @@ public class SceneController : MonoBehaviour
     public void StartNewGame(){
         Initialize();
         isStart = true;
+        Debug.Log("start");
         StartRound();
     } 
 
@@ -66,6 +83,7 @@ public class SceneController : MonoBehaviour
 
     //开始一轮抛掷飞碟（10个）
     public void StartRound(){
+        Debug.Log("Start Round");
         factory.GetComponent<UFOFactory>().SetDifficulty(currentDifficulty);
         factory.GetComponent<UFOFactory>().InitializeUFO();
         factory.GetComponent<UFOFactory>().StartRound();

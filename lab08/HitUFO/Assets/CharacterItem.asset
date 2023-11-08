@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb16dcbdaa9ef0b4f828625f251aac19, type: 3}
+  m_Name: CharacterItem
+  m_EditorClassIdentifier: 
+  Name: "\u6253\u98DE\u789F"
+  Desc: "\u6E38\u620F\u8BBE\u7F6E"
+  Attributes:
+    round: 10
+    blood: 10
+    initial_difficulty: 0
+    UFOs_per_round: 10
