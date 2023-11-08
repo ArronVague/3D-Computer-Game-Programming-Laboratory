@@ -24,7 +24,6 @@ public class UFOFactory : MonoBehaviour
     }
 
 
-
     public void InitializeUFO()
     {
         if (mCoroutine != null)
@@ -82,6 +81,21 @@ public class UFOFactory : MonoBehaviour
     {
         UFOs[id].SetUFOActive(false);
         myController.AddScore();
+        if (CheckRoundFinish())
+        {
+            if (mCoroutine != null)
+            {
+                StopCoroutine(mCoroutine);
+                mCoroutine = null;
+            }
+            myController.RoundDone();
+        }
+    }
+
+    public void FailUFO(int id)
+    {
+        UFOs[id].SetUFOActive(false);
+        myController.SubBlood();
         if (CheckRoundFinish())
         {
             if (mCoroutine != null)
