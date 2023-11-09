@@ -6,11 +6,11 @@
 
 #### bug版
 
-![](pic/HitUFO_bug.gif)
+![](pic/HitUFO_bug_compressed.gif)
 
 #### 最终版
 
-![](pic/HitUFO.gif)
+![](pic/HitUFO_compressed.gif)
 
 ### 游戏设计
 
