@@ -15,7 +15,6 @@ MonoBehaviour:
   Name: "\u6253\u98DE\u789F"
   Desc: "\u6E38\u620F\u8BBE\u7F6E"
   Attributes:
-    round: 10
     blood: 10
-    initial_difficulty: 0
+    initial_difficulty: 4
     UFOs_per_round: 10

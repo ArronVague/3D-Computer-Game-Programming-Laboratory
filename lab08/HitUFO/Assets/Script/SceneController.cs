@@ -25,22 +25,6 @@ public class SceneController : MonoBehaviour
 
     //对场景参数进行初始化
     public void Initialize(){
-/*        if (CharDataModel != null)
-        {
-            // 访问CharacterItem对象的属性
-            int round = CharDataModel.Attributes.round;
-            int blood = CharDataModel.Attributes.blood;
-            int currentDifficulty = CharDataModel.Attributes.initial_difficulty;
-
-            // 在控制台输出属性值进行验证
-            Debug.Log("Round: " + round);
-            Debug.Log("Blood: " + blood);
-            Debug.Log("Current Difficulty: " + currentDifficulty);
-        }
-        else
-        {
-            Debug.LogError("CharDataModel is not assigned!");
-        }*/
         round = 1;
         score = 0;
         blood = CharDataModel.Attributes.blood;
@@ -51,13 +35,13 @@ public class SceneController : MonoBehaviour
 
     //点击飞碟时触发加分
     public void AddScore(){
-        score += 1;
+        score++;
     }
 
     // UFO飞出窗口时触发减分
     public void SubBlood(){
         if(blood > 0){
-            blood -= 1;
+            blood--;
         }
         if(blood == 0){
             isFailed = true;
@@ -92,7 +76,6 @@ public class SceneController : MonoBehaviour
     //当一轮游戏结束，通知开始下一轮游戏
     public void RoundDone(){
         round++;
-        currentDifficulty++;
         StartRound();
     }
 }
