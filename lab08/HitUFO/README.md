@@ -4,6 +4,8 @@
 
 ### 游戏演示
 
+温馨提示，GIF需要一点时间加载，总共两张。
+
 #### bug版
 
 ![](pic/HitUFO_bug_compressed.gif)
