@@ -39,3 +39,12 @@ Avoid using spaces if possible. I tried to use path as
 It worked in marktext, but not in github
 
 The final solution is to replace spaces with `%20` beacause github will automatically replace spaces in path with `%20`.
+
+### 预制件Prefabs
+
+不能删除挂载的组件！如
+
+```csharp
+Destory(Object.GetComponent<MoveOut>());
+```
+
