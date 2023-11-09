@@ -1,32 +1,42 @@
 # lab08-物理引擎与碰撞1
 
+## 鼠标打飞碟
 
+### 游戏演示
 
-**案例研究：“鼠标打飞碟”游戏设计**
+#### bug版
 
-游戏需求：
+![](pic/HitUFO_bug.gif)
+
+#### 最终版
+
+![](pic/HitUFO.gif)
+
+### 游戏设计
+
+#### 游戏需求
 
 - 分多个 round ， 每个 round 都是 n 个 trial；
 - 每个 trial 的飞碟的色彩、大小、发射位置、速度、角度、每次发射飞碟数量不一；
 - 鼠标击中得分，得分按色彩、大小、速度不同计算，计分规则自由定。
 
-鼠标打飞碟（Hit UFO）
+### 使用对象池管理飞碟对象
 
-使用对象池管理飞碟对象
+> **对象池技术**
+>
+> 对象池技术是一种特殊的对象工厂。对象池类就像是一个对象管理员，它使用一个或多个集合存储某类有限的对象实例。它在承担对象创建和回收的职责过程中，
+>
+> - 按一定策略缓存一定数量的对象，
+> - 在客户请求创建对象时，优先使用已有的对象，并恰当初始化。如果没有缓存对象，再创建对象
+> - 在对象使用完后，并不立即回收，而是先放回缓冲池，如果有请求则立即转为使用，已减少创建成本。在系统空闲时，按一定策略回收。
+>
+> 例如：数据库连接对象池等
 
-对象池技术
-
-用一个或多个集合存储某类有限的对象实例。它在承担对象创建和回收的职责过程中，
-
-- 按一定策略缓存一定数量的对象。
-- 在客户请求创建对象时，优先使用已有的对象，并恰当初始化。如果没有缓存对象，再创建对象。
-- 在对象使用完后，并不立即回收，而是先放回缓冲池，如果有请求则立即转为使用，已减少创建成本。在系统空闲时，按一定策略回收。
-
-UML
+##### UML
 
 ![](pic/UML.drawio.svg)
 
-SceneController中会实例化UFOFactory，并交给UFOFactory初始化UFO池。本次实验没有使用used和free两个list存储UFO对象，直接开辟一个固定长度的UFO数组。
+`SceneController`中会实例化`UFOFactory`，并交给`UFOFactory`初始化UFO池。本次实验没有使用used和free两个list存储UFO对象，直接开辟一个固定长度的UFO数组。
 
 ```csharp
 public class SceneController : MonoBehaviour
@@ -88,11 +98,9 @@ public class UFOFactory : MonoBehaviour
 
 - 初始化UFO池
 
-UFO实例化时会挂载Click.cs以及MoveOut.cs
+UFO对象会挂载`Click.cs`以及`MoveOut.cs`。其中`Click.cs`用来控制UFO被点击时触发的效果，`MoveOut.cs`用来控制UFO飞出窗口的触发效果。
 
-Click.cs用来控制UFO被点击时触发的效果，MoveOut.cs用来控制UFO飞出窗口的触发效果
-
-使用ScriptableObject配置不同的飞碟
+### 使用ScriptableObject配置不同的飞碟
 
 ```csharp
 using System;
@@ -128,7 +136,9 @@ public class CharacterItem : ScriptableObject
 
 在Inspector中可以设置游戏的初始难度（1~5）、血量以及每轮出现的UFO数。
 
-使用物理引擎管理飞碟飞行路径
+![](pic/inspector.png)
+
+### 使用物理引擎管理飞碟飞行路径
 
 若UFO对象没有Rigidbody组件，则添加，并施加冲量力，影响UFO的飞行路径。
 
@@ -156,7 +166,7 @@ public class UFO
 }
 ```
 
-参考文献
+## 参考文献
 
 [Unity3D小游戏——打飞碟](https://www.cnblogs.com/LC32/p/15469806.html)
 
