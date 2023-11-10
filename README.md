@@ -1,16 +1,18 @@
 # 3D游戏编程与设计
 
-## [lab01-让非专业人士制作游戏](w01-introduction)
+## 目录
 
-## [lab02-小组策划](w02-nature-of-game)
+[lab01-让非专业人士制作游戏](w01-introduction)
 
-## [lab03-游戏循环和mvc结构](w03-discrete-simulation-basic)
+[lab02-小组策划](w02-nature-of-game)
 
-## [lab05-创建游戏世界1](w05-building-game-world/PriestsAndDevils)
+[lab03-游戏循环和mvc结构](w03-discrete-simulation-basic)
 
-## [lab06-创建游戏世界2](w06-building-game-world/PriestsAndDevils-ActionSeparate)
+[lab05-创建游戏世界1](w05-building-game-world/PriestsAndDevils)
 
-## [lab08-物理引擎与碰撞1](lab08/HitUFO)
+[lab06-创建游戏世界2](w06-building-game-world/PriestsAndDevils-ActionSeparate)
+
+[lab08-物理引擎与碰撞1](w08-physics-and-collisions/HitUFO)
 
 ## 考试（可能）
 
