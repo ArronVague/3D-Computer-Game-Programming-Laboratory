@@ -17,10 +17,9 @@
 ## 考试（可能）
 
 - 画砖墙
-
 - 改正交投影（Camera Projection）
-
 - Camera摄像机的使用
+- Has Exit Time
 
 ## 一些吐槽
 
