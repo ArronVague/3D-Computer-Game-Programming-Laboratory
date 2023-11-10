@@ -8,7 +8,7 @@
 
 ## [lab05-创建游戏世界1](w05-building-game-world/PriestsAndDevils)
 
-## [lab06-创建游戏世界2](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
+## [lab06-创建游戏世界2](w06-building-game-world/PriestsAndDevils-ActionSeparate)
 
 ## [lab08-物理引擎与碰撞1](lab08/HitUFO)
 
