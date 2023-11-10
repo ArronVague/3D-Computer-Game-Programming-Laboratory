@@ -1,12 +1,12 @@
 # 3D游戏编程与设计
 
-## [lab01-让非专业人士制作游戏](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab01)
+## [lab01-让非专业人士制作游戏](w01-introduction)
 
-## [lab02-小组策划](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab02)
+## [lab02-小组策划](w02-nature-of-game)
 
-## [lab03-游戏循环和mvc结构](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab03)
+## [lab03-游戏循环和mvc结构](w03-discrete-simulation-basic)
 
-## [lab05-创建游戏世界1](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab05/Priests%20and%20Devils)
+## [lab05-创建游戏世界1](w05-building-game-world/PriestsAndDevils)
 
 ## [lab06-创建游戏世界2](https://github.com/ArronVague/3D-Computer-Game-Programming-Laboratory/tree/master/lab06/Priests%20and%20Devils-Action%20Separate)
 
