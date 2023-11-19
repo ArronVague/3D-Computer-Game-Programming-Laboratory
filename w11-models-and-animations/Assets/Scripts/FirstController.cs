@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class FirstController : MonoBehaviour, ISceneController, IUserAction {
+public class FirstController : MonoBehaviour, SceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
 	public ArrowFactory arrowfactory { get; set; }
 	public GameObject Arrow;
-
-	public CCActionManager actionManager { get; set;}
-	public GameObject move1,move2;
+	public GameObject Bow;
+	public Text ScoreText;
+	public int score;
 
 	// the first scripts
 	void Awake () {
@@ -16,40 +17,53 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 		director.setFPS (60);
 		director.currentSceneController = this;
 		director.currentSceneController.LoadResources ();
-		Debug.Log ("awake FirstController!");
-	}
-	 
-	// loading resources for first scence
-	public void LoadResources () {
-		;
+		actionManager = gameObject.AddComponent<CCActionManager>();
+		arrowfactory = gameObject.AddComponent<ArrowFactory>();
 	}
 
-	public void Pause ()
+	public void hit(Vector3 dir)
 	{
-		throw new System.NotImplementedException ();
+		actionManager.playArrow(Bow.transform.position);
 	}
 
-	public void Resume ()
-	{
-		throw new System.NotImplementedException ();
-	}
-
-	#region IUserAction implementation
-	public void GameOver ()
-	{
-		SSDirector.getInstance ().NextScene ();
-	}
-	#endregion
-
-
-	// Use this for initialization
-	void Start () {
+    // Update is called once per frame
+    void Update()
+    {
 		//give advice first
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		//give advice first
+		ScoreText.text = "Score: " + score.ToString();
+    }
+
+	public void StartGame()
+	{
+
 	}
 
+	public float getWindforce()
+	{
+		return actionManager.getforce();
+	}
+
+	public void ShowDetail()
+	{
+		GUI.Label(new Rect(220, 50, 350, 250), "you can control the bow and click mouse to emit arrow");
+	}
+
+    // loading resources for first scence
+    public void LoadResources () {
+		Debug.Log("load...\n");
+
+		Instantiate(Resources.Load("Prefabs/Target"));
+		Bow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
+		Arrow.transform.position = Bow.transform.position;
+	}
+
+	public void Pause()
+	{
+
+	}
+
+	public void Resume()
+	{
+
+	}
 }
