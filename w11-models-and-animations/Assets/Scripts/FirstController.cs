@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FirstController : MonoBehaviour, SceneController, IUserAction {
+public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
 	public ArrowFactory arrowfactory { get; set; }
 	public GameObject Arrow;
