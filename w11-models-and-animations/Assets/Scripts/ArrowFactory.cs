@@ -37,5 +37,7 @@ public class ArrowFactory : MonoBehaviour
 
         newArrow.transform.position = arrowTemplate.transform.position;
         newArrow.transform.localEulerAngles = new Vector3(90, 0, 0);
+        usedArrow.Add(newArrow);
+        return newArrow;
     }
 }
