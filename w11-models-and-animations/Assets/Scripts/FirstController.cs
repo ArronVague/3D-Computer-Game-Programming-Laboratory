@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
-	public ArrowFactory arrowFactory { get; set; }
+	public ArrowFactory arrowfactory { get; set; }
+	public GameObject Arrow;
 
 	public CCActionManager actionManager { get; set;}
 	public GameObject move1,move2;

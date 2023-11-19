@@ -40,4 +40,28 @@ public class ArrowFactory : MonoBehaviour
         usedArrow.Add(newArrow);
         return newArrow;
     }
+
+    public void FreeArrow1(GameObject arrow1)
+    {
+        for (int i = 0; i < usedArrow.Count; i++)
+        {
+            if (usedArrow[i] == arrow1)
+            {
+                usedArrow.Remove(arrow1);
+                arrow1.SetActive(true);
+                freeArrow.Add(arrow1);
+            }
+        }
+        return;
+    }
+
+    void Start()
+    {
+        sceneController = (FirstController)SSDirector.getInstance().currentSceneController;
+        sceneController.arrowfactory = this;
+        arrowTemplate = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;
+        arrowTemplate.SetActive(false);
+        arrowTemplate.transform.localEulerAngles = new Vector3(90, 0, 0);
+        freeArrow.Add(sceneController.Arrow);
+    }
 }
