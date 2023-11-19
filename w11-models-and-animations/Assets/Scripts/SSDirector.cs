@@ -6,7 +6,7 @@ public class SSDirector : System.Object {
 	// singlton instance
 	private static SSDirector _instance;
 
-	public ISceneController currentSceneController { get; set;}
+	public SceneController currentSceneController { get; set;}
 	public bool running{ get; set;} 
 
 	// get instance anytime anywhare!
