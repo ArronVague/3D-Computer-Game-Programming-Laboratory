@@ -64,4 +64,9 @@ public class ArrowFactory : MonoBehaviour
         arrowTemplate.transform.localEulerAngles = new Vector3(90, 0, 0);
         freeArrow.Add(sceneController.Arrow);
     }
+
+    void Update()
+    {
+
+    }
 }
