@@ -5,7 +5,7 @@ using UnityEngine;
 public class SSAction : ScriptableObject {
 
 	public bool enable = true;
-	public bool destory = false;
+	public bool destroy = false;
 
 	public GameObject gameobject { get; set; }
 	public Transform transform { get; set; }

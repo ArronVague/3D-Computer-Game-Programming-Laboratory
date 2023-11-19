@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Com.Mygame;
 
 public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
@@ -33,14 +34,14 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 		ScoreText.text = "Score: " + score.ToString();
     }
 
-	public void StartGame()
+    public float getWindforce()
+    {
+        return actionManager.getforce();
+    }
+
+    public void StartGame()
 	{
 
-	}
-
-	public float getWindforce()
-	{
-		return actionManager.getforce();
 	}
 
 	public void ShowDetail()

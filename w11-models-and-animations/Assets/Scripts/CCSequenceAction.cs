@@ -25,29 +25,36 @@ public class CCSequenceAction : SSAction, ISSActionCallback
 		}
 	}
 
-	public void SSActionEvent (SSAction source, SSActionEventType events = SSActionEventType.Competeted, int intParam = 0, string strParam = null, Object objectParam = null)
+    // Use this for initialization
+    public override void Start()
+    {
+        foreach (SSAction action in sequence)
+        {
+            action.gameobject = this.gameobject;
+            action.transform = this.transform;
+            action.callback = this;
+            action.Start();
+        }
+    }
+
+	void OnDestroy()
 	{
-		source.destory = false;
+
+	}
+
+    public void SSActionEvent (SSAction source, SSActionEventType events = SSActionEventType.Competeted, int intParam = 0, string strParam = null, Object objectParam = null)
+	{
+		source.destroy = false;
 		this.start++;
 		if (this.start >= sequence.Count) {
 			this.start = 0;
 			if (repeat > 0) repeat--;
-			if (repeat == 0) { this.destory = true; this.callback.SSActionEvent (this); }
+			if (repeat == 0)
+			{
+				this.destroy = true;
+				this.callback.SSActionEvent(this);
+			}
 		}
-	}
-
-	// Use this for initialization
-	public override void Start () {
-		foreach (SSAction action in sequence) {
-			action.gameobject = this.gameobject;
-			action.transform = this.transform;
-			action.callback = this;
-			action.Start ();
-		}
-	}
-
-	void OnDestory() {
-		//TODO: something
 	}
 }
 

@@ -29,7 +29,7 @@ public class play : SSAction
 
     public void Destroy()
     {
-        this.destory = true;
+        this.destroy = true;
         this.callback.SSActionEvent(this);
         Destroy(gameobject.GetComponent<BoxCollider>());
     }

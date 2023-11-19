@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Com.Mygame;
 
 public class UserGUI : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class UserGUI : MonoBehaviour
     private IUserAction action;     // 用户动作接口
     private ISceneController queryInt;   // 场景接口
     public bool isButtonDown = false;
-    public Camera camera;
+    public new Camera camera;
 
     public Text WindForce;
     public Text WindDirection;

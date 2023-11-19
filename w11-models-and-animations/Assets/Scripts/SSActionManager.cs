@@ -8,14 +8,19 @@ public class SSActionManager : MonoBehaviour {
 	private List <SSAction> waitingAdd = new List<SSAction> (); 
 	private List<int> waitingDelete = new List<int> ();
 
-	// Update is called once per frame
-	protected void Update () {
+    protected void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    protected void Update () {
 		foreach (SSAction ac in waitingAdd) actions [ac.GetInstanceID ()] = ac;
 		waitingAdd.Clear ();
 
 		foreach (KeyValuePair <int, SSAction> kv in actions) {
 			SSAction ac = kv.Value;
-			if (ac.destory) { 
+			if (ac.destroy) { 
 				waitingDelete.Add(ac.GetInstanceID()); // release action
 			} else if (ac.enable) { 
 				ac.Update (); // update action
@@ -24,8 +29,8 @@ public class SSActionManager : MonoBehaviour {
 
 		foreach (int key in waitingDelete) {
 			SSAction ac = actions[key]; 
-			actions.Remove(key); 
-			Object.Destroy(ac);
+			actions.Remove(key);
+            Destroy(ac);
 		}
 		waitingDelete.Clear ();
 	}
@@ -36,10 +41,5 @@ public class SSActionManager : MonoBehaviour {
 		action.callback = manager;
 		waitingAdd.Add (action);
 		action.Start ();
-	}
-
-
-	// Use this for initialization
-	protected void Start () {
 	}
 }
