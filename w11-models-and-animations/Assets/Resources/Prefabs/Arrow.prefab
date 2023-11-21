@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 987591639973875829}
   - component: {fileID: 4428174902321744470}
   - component: {fileID: 6027841725863137929}
+  - component: {fileID: 6154588527429791474}
   m_Layer: 31
   m_Name: Arrow
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   - {fileID: 5565183990891645421}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &408021020183098776
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -132,6 +133,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.62}
   m_Center: {x: 0, y: 0, z: 0.31}
+--- !u!114 &6154588527429791474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408021020183098774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790cf63939dfabb4bab69f4f0716327e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 0, b: 0, a: 1}
+  speed: 5
+  director: {x: 0, y: 0, z: 0}
+  Action: {fileID: 0}
+  hit: 0
 --- !u!1 &540271833684498500
 GameObject:
   m_ObjectHideFlags: 0

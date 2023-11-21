@@ -31,13 +31,19 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
 
 	public void playArrow(Vector3 dir)
 	{
+		Debug.Log("CCActionManager's playArrow");
 		force = Random.Range(-50, 50);
 		EmitArrow = play.GetSSAction();
+		Debug.Log(EmitArrow);
 		Arrow = arrowFactory.GetArrow1();
+		Debug.Log(Arrow);
 		Arrow.transform.position = dir;
 		Arrow.GetComponent<Rigidbody>().AddForce(new Vector3(force, 0.3f, 2), ForceMode.Impulse);
+		Debug.Log("this?");
 		this.RunAction(Arrow, EmitArrow, this);
+		Debug.Log("or this?");
 		Arrow.GetComponent<Data>().hit = false;
+		Debug.Log("why not");
 	}
 
 	public void SSActionEvent (SSAction source, SSActionEventType events = SSActionEventType.Competeted, int intParam = 0, string strParam = null, Object objectParam = null)

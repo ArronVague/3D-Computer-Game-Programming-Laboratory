@@ -12,7 +12,7 @@ public class UserGUI : MonoBehaviour
     public new Camera camera;
 
     public Text WindForce;
-    public Text WindDirection;
+/*    public Text WindDirection;*/
     void Start()
     {
         // 实例化对象
@@ -22,7 +22,7 @@ public class UserGUI : MonoBehaviour
     void Update()
     {
         float force = queryInt.getWindforce();
-        if (force < 0)
+/*        if (force < 0)
         {
             WindDirection.text = "Wind Direction : Left";
         }
@@ -34,7 +34,7 @@ public class UserGUI : MonoBehaviour
         {
             WindDirection.text = "Wind Direction : No Wind";
         }
-        WindForce.text = "Wind Force : " + queryInt.getWindforce(); //显示风力
+        WindForce.text = "Wind Force : " + queryInt.getWindforce(); //显示风力*/
     }
     void OnGUI()
     {
@@ -53,6 +53,7 @@ public class UserGUI : MonoBehaviour
         {
             Ray mouseRay = camera.ScreenPointToRay(Input.mousePosition);
             Debug.Log("RayDir = " + mouseRay.direction);
+            Debug.Log(action);
             action.hit(mouseRay.direction);
             isButtonDown = true;
         }

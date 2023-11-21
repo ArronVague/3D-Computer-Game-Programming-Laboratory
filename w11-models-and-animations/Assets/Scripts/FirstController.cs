@@ -24,6 +24,8 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 
 	public void hit(Vector3 dir)
 	{
+		Debug.Log("FirstController's hit");
+		Debug.Log(actionManager);
 		actionManager.playArrow(Bow.transform.position);
 	}
 
@@ -31,7 +33,7 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
     void Update()
     {
 		//give advice first
-		ScoreText.text = "Score: " + score.ToString();
+/*		ScoreText.text = "Score: " + score.ToString();*/
     }
 
     public float getWindforce()
