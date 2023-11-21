@@ -8,15 +8,18 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
 	public ArrowFactory arrowfactory { get; set; }
 	public GameObject Arrow;
-	public GameObject Bow;
+	public GameObject CrossBow;
 	public Text ScoreText;
 	public int score;
+
+	public Transform cameraTransform;
 
 	// the first scripts
 	void Awake () {
 		SSDirector director = SSDirector.getInstance ();
 		director.setFPS (60);
 		director.currentSceneController = this;
+		cameraTransform = Camera.main.transform;
 		director.currentSceneController.LoadResources ();
 		actionManager = gameObject.AddComponent<CCActionManager>();
 		arrowfactory = gameObject.AddComponent<ArrowFactory>();
@@ -26,7 +29,7 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	{
 		Debug.Log("FirstController's hit");
 		Debug.Log(actionManager);
-		actionManager.playArrow(Bow.transform.position);
+		actionManager.playArrow(CrossBow.transform.position);
 	}
 
     // Update is called once per frame
@@ -56,8 +59,16 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 		Debug.Log("load...\n");
 
 		Instantiate(Resources.Load("Prefabs/Target"));
-		Bow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
-		Arrow.transform.position = Bow.transform.position;
+        CrossBow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
+		CrossBowFollow bowFollowScript = CrossBow.GetComponent<CrossBowFollow>();
+		if (bowFollowScript != null )
+		{
+			Debug.Log("bow");
+			bowFollowScript.cameraTransform = cameraTransform;
+			bowFollowScript.offset = new Vector3(0, -1f, 1f);
+		}
+
+		Arrow.transform.position = CrossBow.transform.position;
 	}
 
 	public void Pause()
