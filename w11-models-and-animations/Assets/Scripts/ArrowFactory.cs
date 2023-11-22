@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -60,9 +61,10 @@ public class ArrowFactory : MonoBehaviour
         sceneController = (FirstController)SSDirector.getInstance().currentSceneController;
         sceneController.arrowfactory = this;
         arrowTemplate = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;
+        Debug.Log("load arrowtemplate");
         arrowTemplate.SetActive(false);
         arrowTemplate.transform.localEulerAngles = new Vector3(90, 0, 0);
-        freeArrow.Add(sceneController.Arrow);
+        /*        freeArrow.Add(sceneController.Arrow);*/
     }
 
     void Update()

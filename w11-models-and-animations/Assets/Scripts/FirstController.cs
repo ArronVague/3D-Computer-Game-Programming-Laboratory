@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
 	public ArrowFactory arrowfactory { get; set; }
-	public GameObject Arrow;
+/*	public GameObject Arrow;*/
 	public GameObject CrossBow;
 	public FollowCamera followCamera;
 
@@ -24,8 +24,6 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 
 	public void hit(Vector3 dir)
 	{
-		Debug.Log("FirstController's hit");
-		Debug.Log(actionManager);
 		actionManager.playArrow(CrossBow.transform.position);
 	}
 
@@ -34,11 +32,6 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
     {
 		//give advice first
 /*		ScoreText.text = "Score: " + score.ToString();*/
-    }
-
-    public float getWindforce()
-    {
-        return actionManager.getforce();
     }
 
     public void StartGame()
@@ -57,11 +50,11 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 
 		Instantiate(Resources.Load("Prefabs/Target"));
         CrossBow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
-		Arrow = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;
+/*		Arrow = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;*/
 		followCamera = CrossBow.GetComponent<FollowCamera>();
 		followCamera.offset = new Vector3(0, -0.4f, 0.2f);
 		followCamera.cameraTransform = Camera.main.transform;
-        Arrow.transform.position = CrossBow.transform.position;
+/*		Arrow.transform.position = CrossBow.transform.position;*/
 	}
 
 	public void Pause()
