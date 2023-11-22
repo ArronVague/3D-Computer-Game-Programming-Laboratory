@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Com.Mygame;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 	public IshootArrow actionManager { get; set; }
 	public ArrowFactory arrowfactory { get; set; }
 	public GameObject Arrow;
 	public GameObject CrossBow;
-	public Text ScoreText;
-	public int score;
-
-	public Transform cameraTransform;
+	public FollowCamera followCamera;
 
 	// the first scripts
 	void Awake () {
 		SSDirector director = SSDirector.getInstance ();
 		director.setFPS (60);
 		director.currentSceneController = this;
-		cameraTransform = Camera.main.transform;
 		director.currentSceneController.LoadResources ();
 		actionManager = gameObject.AddComponent<CCActionManager>();
 		arrowfactory = gameObject.AddComponent<ArrowFactory>();
@@ -60,15 +57,11 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 
 		Instantiate(Resources.Load("Prefabs/Target"));
         CrossBow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
-		CrossBowFollow bowFollowScript = CrossBow.GetComponent<CrossBowFollow>();
-		if (bowFollowScript != null )
-		{
-			Debug.Log("bow");
-			bowFollowScript.cameraTransform = cameraTransform;
-			bowFollowScript.offset = new Vector3(0, -1f, 1f);
-		}
-
-		Arrow.transform.position = CrossBow.transform.position;
+		Arrow = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;
+		followCamera = CrossBow.GetComponent<FollowCamera>();
+		followCamera.offset = new Vector3(0, -0.4f, 0.2f);
+		followCamera.cameraTransform = Camera.main.transform;
+        Arrow.transform.position = CrossBow.transform.position;
 	}
 
 	public void Pause()

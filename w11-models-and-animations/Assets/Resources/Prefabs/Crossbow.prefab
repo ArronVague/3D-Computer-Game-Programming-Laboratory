@@ -429,7 +429,6 @@ GameObject:
   - component: {fileID: 5393310735133442029}
   - component: {fileID: 2617400934589354647}
   - component: {fileID: 8901724313058020509}
-  - component: {fileID: 450669198645745603}
   - component: {fileID: 5809001009148466288}
   m_Layer: 31
   m_Name: Crossbow
@@ -574,19 +573,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &450669198645745603
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8972219739933445630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08, y: 0.15, z: 1.6}
-  m_Center: {x: 0, y: 0.07, z: 0.32999998}
 --- !u!114 &5809001009148466288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,7 +582,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8972219739933445630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55988f743aa4be54b887c285c9657d4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0701c06ebf6aafa4a826a3e522894d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 0}
