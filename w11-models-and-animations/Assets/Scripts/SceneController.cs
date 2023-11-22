@@ -14,7 +14,7 @@ namespace Com.Mygame
     {
         void ShowDetail();
         void StartGame();
-        void hit(Vector3 dir);
+        void hit();
     }
 
 }

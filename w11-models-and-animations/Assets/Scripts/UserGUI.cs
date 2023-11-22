@@ -36,9 +36,9 @@ public class UserGUI : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isButtonDown)
         {
             Ray mouseRay = camera.ScreenPointToRay(Input.mousePosition);
-            Debug.Log("RayDir = " + mouseRay.direction);
-            Debug.Log(action);
-            action.hit(mouseRay.direction);
+/*            Debug.Log("RayDir = " + mouseRay.direction);
+            Debug.Log(action);*/
+            action.hit();
             isButtonDown = true;
         }
         else if (Input.GetMouseButtonDown(0) && isButtonDown)

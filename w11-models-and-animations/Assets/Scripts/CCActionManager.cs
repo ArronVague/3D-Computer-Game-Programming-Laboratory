@@ -23,17 +23,17 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
 		base.Update ();
 	}
 
-	public void playArrow(Vector3 dir)
+	public void playArrow()
 	{
-		shootForce = 0.5f;
+		shootForce = 0.25f;
 
         Quaternion cameraRotation = Camera.main.transform.rotation;
 
 
 		EmitArrow = play.GetSSAction();
 		Arrow = arrowFactory.GetArrow1();
-		// set arrow's initial position
-		Arrow.transform.position = sceneController.CrossBow.transform.position;
+        // set arrow's initial position
+        Arrow.transform.position = sceneController.CrossBow.transform.position;
 		Arrow.transform.rotation = cameraRotation;
 		Vector3 shootDirection = cameraRotation * Vector3.forward;
 		Arrow.GetComponent<Rigidbody>().AddForce(shootDirection * shootForce, ForceMode.Impulse);

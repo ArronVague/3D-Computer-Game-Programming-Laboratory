@@ -5,5 +5,5 @@ using Com.Mygame;
 
 public interface IshootArrow
 {
-    void playArrow(Vector3 dir);
+    void playArrow();
 }

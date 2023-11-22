@@ -22,9 +22,9 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 		arrowfactory = gameObject.AddComponent<ArrowFactory>();
 	}
 
-	public void hit(Vector3 dir)
+	public void hit()
 	{
-		actionManager.playArrow(CrossBow.transform.position);
+		actionManager.playArrow();
 	}
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
     public void LoadResources () {
 		Debug.Log("load...\n");
 
-		Instantiate(Resources.Load("Prefabs/Target"));
+/*		Instantiate(Resources.Load("Prefabs/Target"));*/
         CrossBow = Instantiate(Resources.Load("Prefabs/Crossbow")) as GameObject;
 /*		Arrow = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;*/
 		followCamera = CrossBow.GetComponent<FollowCamera>();

@@ -23,7 +23,7 @@ public class CustomCursor : MonoBehaviour
             Vector3 centerScreen = new Vector3(Screen.width / 2, Screen.height / 2, 0);
 
             // Êä³ö×ø±ê
-            Debug.Log("Clicked at screen center: " + centerScreen);
+/*            Debug.Log("Clicked at screen center: " + centerScreen);*/
         }
     }
 
