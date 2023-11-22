@@ -14,6 +14,8 @@
 
 [lab08-物理引擎与碰撞1](w08-physics-and-collisions/HitUFO)
 
+[lab11-模型与动画2](w11-models-and-animations)
+
 ## 考试（可能）
 
 - 画砖墙
