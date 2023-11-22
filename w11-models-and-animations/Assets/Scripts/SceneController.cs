@@ -8,7 +8,6 @@ namespace Com.Mygame
     public interface ISceneController
     {
         void LoadResources();
-        float getWindforce();
     }
 
     public interface IUserAction

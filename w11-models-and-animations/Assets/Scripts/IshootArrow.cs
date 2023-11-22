@@ -6,5 +6,4 @@ using Com.Mygame;
 public interface IshootArrow
 {
     void playArrow(Vector3 dir);
-    float getforce();
 }

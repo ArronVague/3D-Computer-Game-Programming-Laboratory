@@ -19,20 +19,6 @@ public class UserGUI : MonoBehaviour
     }
     void Update()
     {
-        float force = queryInt.getWindforce();
-/*        if (force < 0)
-        {
-            WindDirection.text = "Wind Direction : Left";
-        }
-        else if (force > 0)
-        {
-            WindDirection.text = "Wind Direction : Right";
-        }
-        else
-        {
-            WindDirection.text = "Wind Direction : No Wind";
-        }
-        WindForce.text = "Wind Force : " + queryInt.getWindforce(); //œ‘ æ∑Á¡¶*/
     }
     void OnGUI()
     {
