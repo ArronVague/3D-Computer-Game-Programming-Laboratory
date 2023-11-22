@@ -13,6 +13,8 @@ main camera挂载了userGUI和cameracontroller
 - [x] 游走：不能碰
 - [ ] 射中靶标
 
+CCActionManager.playArrow控制箭发射的初始力，play控制的是箭发射出去后的飞行轨迹。这里并不需要，用rigidbody。
+
 参考文献
 
 射箭打靶
