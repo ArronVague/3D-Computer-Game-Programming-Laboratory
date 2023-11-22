@@ -32,7 +32,7 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
 
 		EmitArrow = play.GetSSAction();
 		Arrow = arrowFactory.GetArrow1();
-		// set arron's initial position
+		// set arrow's initial position
 		Arrow.transform.position = sceneController.CrossBow.transform.position;
 		Arrow.transform.rotation = cameraRotation;
 		Vector3 shootDirection = cameraRotation * Vector3.forward;
