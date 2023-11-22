@@ -1,6 +1,6 @@
 # lab11-模型与动画2
 
-main camera挂载了userGUI和cameracontroller
+
 
 - [ ] 博客
 
@@ -15,6 +15,14 @@ main camera挂载了userGUI和cameracontroller
 - [x] 射中靶标
 
 CCActionManager.playArrow控制箭发射的初始力，play控制的是箭发射出去后的飞行轨迹。这里并不需要，用rigidbody。
+
+使用说明
+
+Main Camera挂载UserGUI.cs，添加组件Skybox()。
+
+将预制件FPSController拖入Hierarchy，并挂载FirstController.cs。
+
+FPSController子组件FirstPersonCharacter挂载SkyboxController。
 
 参考文献
 
