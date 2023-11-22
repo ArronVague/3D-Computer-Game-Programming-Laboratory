@@ -13,10 +13,11 @@ public class Target : MonoBehaviour
         Debug.Log("target");
         sceneController = (FirstController)SSDirector.getInstance().currentSceneController;
     }
-    void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("jizhong");
-        Debug.Log(other.gameObject);
+        Debug.Log("OnCollisionEnter");
+        /*        Debug.Log(other.gameObject);*/
         if (other.gameObject.tag == "Arrow")
         {
             if (!other.gameObject.GetComponent<Data>().hit)
@@ -24,10 +25,13 @@ public class Target : MonoBehaviour
                 other.gameObject.GetComponent<Data>().hit = true;
                 Debug.Log(num);
             }
-            EmitDisk = (play)other.gameObject.GetComponent<Data>().Action;
-            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;//插在箭靶上  
-            EmitDisk.Destroy();//动作完成
-        }
 
+            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            // 将刚体设置为Kinematic，停止物理模拟
+            other.gameObject.transform.SetParent(transform); // 设置箭靶物体为箭的父对象，一起移动
+        }
     }
 }
