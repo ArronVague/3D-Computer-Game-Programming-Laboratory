@@ -11,8 +11,6 @@ public class UserGUI : MonoBehaviour
     public bool isButtonDown = false;
     public new Camera camera;
 
-    public Text WindForce;
-/*    public Text WindDirection;*/
     void Start()
     {
         // 实例化对象

@@ -23,7 +23,6 @@ public class Target : MonoBehaviour
             {
                 other.gameObject.GetComponent<Data>().hit = true;
                 Debug.Log(num);
-                sceneController.score += num;//加分
             }
             EmitDisk = (play)other.gameObject.GetComponent<Data>().Action;
             other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;//插在箭靶上  
