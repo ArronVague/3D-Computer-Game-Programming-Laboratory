@@ -24,6 +24,8 @@ Main Camera挂载UserGUI.cs，添加组件Skybox()。
 
 FPSController子组件FirstPersonCharacter挂载SkyboxController。
 
+添加预制件Target，并挂载
+
 参考文献
 
 射箭打靶
