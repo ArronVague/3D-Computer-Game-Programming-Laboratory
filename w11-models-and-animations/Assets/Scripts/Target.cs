@@ -1,12 +1,12 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Target : MonoBehaviour
 {
     public int num;//每个靶都有特定的分数
-    public play EmitDisk;
     public FirstController sceneController;//场记
+
     //private ScoreRecorder recorder;
     public void Start()
     {
@@ -17,7 +17,7 @@ public class Target : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("OnCollisionEnter");
-        /*        Debug.Log(other.gameObject);*/
+        *//*        Debug.Log(other.gameObject);*//*
         if (other.gameObject.tag == "Arrow")
         {
             if (!other.gameObject.GetComponent<Data>().hit)
@@ -34,4 +34,4 @@ public class Target : MonoBehaviour
             other.gameObject.transform.SetParent(transform); // 设置箭靶物体为箭的父对象，一起移动
         }
     }
-}
+}*/

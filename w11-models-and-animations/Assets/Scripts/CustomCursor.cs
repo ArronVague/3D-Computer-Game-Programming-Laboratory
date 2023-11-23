@@ -14,19 +14,6 @@ public class CustomCursor : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void Update()
-    {
-        // 检测鼠标左键点击
-        if (Input.GetMouseButtonDown(0))
-        {
-            // 获取屏幕中心的坐标
-            Vector3 centerScreen = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-
-            // 输出坐标
-/*            Debug.Log("Clicked at screen center: " + centerScreen);*/
-        }
-    }
-
     void OnGUI()
     {
         // 设置文本的位置为屏幕中心
