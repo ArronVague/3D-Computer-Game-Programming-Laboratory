@@ -17,6 +17,25 @@ public class ArrowCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("TargetRunning") && !hasCollided)
+        {
+            hasCollided = true;
+            firstController.score++;
+            // 获取碰撞前的角度
+            Quaternion preCollisionRotation = initialRotation;
+
+            // 停止运动
+            Rigidbody arrowRigidbody = GetComponent<Rigidbody>();
+            arrowRigidbody.isKinematic = true;
+            arrowRigidbody.velocity = Vector3.zero;
+            arrowRigidbody.angularVelocity = Vector3.zero;
+
+            // 设置角度
+            
+            transform.rotation = preCollisionRotation;
+            gameObject.transform.SetParent(collision.gameObject.transform);
+
+        }
         if (collision.gameObject.CompareTag("Target") && !hasCollided)
         {
             hasCollided = true;
@@ -32,7 +51,7 @@ public class ArrowCollision : MonoBehaviour
 
             // 设置角度
             transform.rotation = preCollisionRotation;
-            gameObject.transform.SetParent(collision.gameObject.transform);
+
         }
     }
 }
