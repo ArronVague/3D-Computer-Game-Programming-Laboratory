@@ -6,9 +6,11 @@ public class SkyboxController : MonoBehaviour
     private int currentSkyboxIndex;
     public bool runningSkybox = false;
     public bool staticSkybox = false;
+    public bool showObstacle = false;
     public LayerMask interactionLayerMask;
     public GameObject target;
     public GameObject runningTarget;
+    public GameObject obstacle;
 
     // ÆäËû½Å±¾Âß¼­...
 
@@ -17,8 +19,8 @@ public class SkyboxController : MonoBehaviour
         currentSkyboxIndex = 0;
         target = GameObject.Find("Target");
         runningTarget = GameObject.Find("RunningTarget");
+        obstacle = GameObject.Find("Obstacle");
         ShowTarget();
-
     }
 
     private void ShowTarget()
@@ -26,6 +28,7 @@ public class SkyboxController : MonoBehaviour
         RenderSettings.skybox = skyboxes[currentSkyboxIndex];
         target.SetActive(staticSkybox);
         runningTarget.SetActive(runningSkybox);
+        obstacle.SetActive(showObstacle);
     }
 
     private void Update()
@@ -69,6 +72,8 @@ public class SkyboxController : MonoBehaviour
                         currentSkyboxIndex = 0;
                     }
                 }
+
+                showObstacle = runningSkybox || staticSkybox;
                 ShowTarget();
             }
         }
