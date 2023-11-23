@@ -32,6 +32,7 @@ public class ArrowCollision : MonoBehaviour
 
             // …Ë÷√Ω«∂»
             transform.rotation = preCollisionRotation;
+            gameObject.transform.SetParent(collision.gameObject.transform);
         }
     }
 }
