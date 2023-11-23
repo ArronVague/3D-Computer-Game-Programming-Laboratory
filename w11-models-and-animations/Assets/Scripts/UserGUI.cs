@@ -25,25 +25,18 @@ public class UserGUI : MonoBehaviour
         GUIStyle fontstyle1 = new GUIStyle();
         fontstyle1.fontSize = 50;
         fontstyle1.normal.textColor = new Color(255, 255, 255);
-        if (GUI.RepeatButton(new Rect(0, 0, 120, 40), "Rule"))
-        {
-            action.ShowDetail();
-        }
-        if (GUI.Button(new Rect(0, 60, 120, 40), "Start"))
-        {
-            action.StartGame();
-        }
-        if (Input.GetMouseButtonDown(0) && !isButtonDown)
+
+/*        if (Input.GetMouseButtonDown(0) && !isButtonDown)
         {
             Ray mouseRay = camera.ScreenPointToRay(Input.mousePosition);
-/*            Debug.Log("RayDir = " + mouseRay.direction);
-            Debug.Log(action);*/
+*//*            Debug.Log("RayDir = " + mouseRay.direction);
+            Debug.Log(action);*//*
             action.hit();
             isButtonDown = true;
         }
         else if (Input.GetMouseButtonDown(0) && isButtonDown)
         {
             isButtonDown = false;
-        }
+        }*/
     }
 }
