@@ -14,7 +14,7 @@ namespace Com.Mygame
     {
         void ShowDetail();
         void StartGame();
-        void hit();
+        void hit(float hold_power);
     }
 
 }

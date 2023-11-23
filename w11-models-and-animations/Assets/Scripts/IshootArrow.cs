@@ -5,5 +5,5 @@ using Com.Mygame;
 
 public interface IshootArrow
 {
-    void playArrow();
+    void playArrow(float hold_power);
 }

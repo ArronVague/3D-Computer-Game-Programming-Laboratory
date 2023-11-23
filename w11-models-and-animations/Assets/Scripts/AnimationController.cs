@@ -49,7 +49,7 @@ public class AnimationController : MonoBehaviour
         else if (Input.GetMouseButtonDown(0) && isHolding)
         {         
             animator.SetTrigger("shoot");
-            action.hit();
+            action.hit(hold_power);
             isHolding = false;
             empty = true;
         }

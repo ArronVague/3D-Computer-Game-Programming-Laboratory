@@ -11,6 +11,7 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 /*	public GameObject Arrow;*/
 	public GameObject CrossBow;
 	public FollowCamera followCamera;
+	public int score;
 
 	// the first scripts
 	void Awake () {
@@ -22,9 +23,9 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
 		arrowfactory = gameObject.AddComponent<ArrowFactory>();
 	}
 
-	public void hit()
+	public void hit(float hold_power)
 	{
-		actionManager.playArrow();
+		actionManager.playArrow(hold_power);
 	}
 
     // Update is called once per frame

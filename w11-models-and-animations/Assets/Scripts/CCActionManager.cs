@@ -9,7 +9,7 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
 	public ArrowFactory arrowFactory;
 	public play EmitArrow;
 	public GameObject Arrow;
-	public float shootForce;
+	public float shootForceRate = 0.25f;
 
 	protected new void Start() {
 		sceneController = (FirstController)SSDirector.getInstance ().currentSceneController;
@@ -23,10 +23,8 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
 		base.Update ();
 	}
 
-	public void playArrow()
+	public void playArrow(float hold_power)
 	{
-		shootForce = 0.25f;
-
         Quaternion cameraRotation = Camera.main.transform.rotation;
 
 
@@ -36,7 +34,7 @@ public class CCActionManager : SSActionManager, ISSActionCallback, IshootArrow {
         Arrow.transform.position = sceneController.CrossBow.transform.position;
 		Arrow.transform.rotation = cameraRotation;
 		Vector3 shootDirection = cameraRotation * Vector3.forward;
-		Arrow.GetComponent<Rigidbody>().AddForce(shootDirection * shootForce, ForceMode.Impulse);
+		Arrow.GetComponent<Rigidbody>().AddForce(shootDirection * hold_power * shootForceRate, ForceMode.Impulse);
 		this.RunAction(Arrow, EmitArrow, this);
 		Arrow.GetComponent<Data>().hit = false;
 	}
