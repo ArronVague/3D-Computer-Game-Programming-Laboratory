@@ -13,9 +13,11 @@ public class AnimationController : MonoBehaviour
     public float hold_power;
     public float powerIncreaseSpeed = 1f;
     public IUserAction action;
+    public SkyboxController skyboxController;
 
     private void Start()
     {
+        skyboxController = Camera.main.GetComponent<SkyboxController>();
         // 获取对象上的Animator组件
         animator = GetComponent<Animator>();
         empty = true;
@@ -31,7 +33,7 @@ public class AnimationController : MonoBehaviour
             power += Time.deltaTime * powerIncreaseSpeed;
             animator.SetFloat("power", power);
         }
-        if (Input.GetMouseButtonDown(0) && empty)
+        if (Input.GetMouseButtonDown(0) && empty &&     skyboxController.showObstacle)
         {
             animator.SetTrigger("pull");
             empty = false;

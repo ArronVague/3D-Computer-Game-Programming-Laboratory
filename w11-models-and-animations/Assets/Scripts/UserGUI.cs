@@ -9,7 +9,6 @@ public class UserGUI : MonoBehaviour
     private IUserAction action;     // 用户动作接口
     private ISceneController queryInt;   // 场景接口
     public new Camera camera;
-    public int score = 0;
     public FirstController firstController;
 
     void Start()
