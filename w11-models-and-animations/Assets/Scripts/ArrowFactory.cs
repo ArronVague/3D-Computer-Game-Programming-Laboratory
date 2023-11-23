@@ -37,7 +37,6 @@ public class ArrowFactory : MonoBehaviour
         }
 
         newArrow.transform.position = arrowTemplate.transform.position;
-/*        newArrow.transform.localEulerAngles = new Vector3(90, 0, 0);*/
         usedArrow.Add(newArrow);
         return newArrow;
     }
@@ -63,8 +62,6 @@ public class ArrowFactory : MonoBehaviour
         arrowTemplate = Instantiate(Resources.Load("Prefabs/Arrow")) as GameObject;
         Debug.Log("load arrowtemplate");
         arrowTemplate.SetActive(false);
-/*        arrowTemplate.transform.localEulerAngles = new Vector3(90, 0, 0);*/
-        /*        freeArrow.Add(sceneController.Arrow);*/
     }
 
     void Update()

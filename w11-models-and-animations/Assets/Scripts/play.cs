@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class play : SSAction
 {
-    int count = 0;
-    bool enableEmie = true;
-    Vector3 force;
-
     public FirstController sceneController = (FirstController)SSDirector.getInstance().currentSceneController;
     
     public static play GetSSAction()
@@ -18,13 +14,10 @@ public class play : SSAction
 
     public override void Start()
     {
-        force = new Vector3(0, 0, 2);
     }
 
     public override void Update()
     {
-/*        gameobject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        gameobject.GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);*/
     }
 
     public void Destroy()

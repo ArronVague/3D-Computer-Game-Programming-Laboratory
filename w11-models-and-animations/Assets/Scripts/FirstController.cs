@@ -31,8 +31,6 @@ public class FirstController : MonoBehaviour, ISceneController, IUserAction {
     // Update is called once per frame
     void Update()
     {
-		//give advice first
-/*		ScoreText.text = "Score: " + score.ToString();*/
     }
 
     public void StartGame()
