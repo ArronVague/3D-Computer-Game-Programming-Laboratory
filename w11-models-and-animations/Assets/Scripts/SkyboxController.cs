@@ -10,6 +10,8 @@ public class SkyboxController : MonoBehaviour
     public LayerMask interactionLayerMask;
     public GameObject target;
     public GameObject runningTarget;
+    public GameObject target_1;
+    public GameObject runningTarget_1;
     public GameObject obstacle;
 
     // ÆäËû½Å±¾Âß¼­...
@@ -19,7 +21,10 @@ public class SkyboxController : MonoBehaviour
         currentSkyboxIndex = 0;
         target = GameObject.Find("Target");
         runningTarget = GameObject.Find("RunningTarget");
+        target_1 = GameObject.Find("Target_1");
+        runningTarget_1 = GameObject.Find("RunningTarget_1");
         obstacle = GameObject.Find("Obstacle");
+
         ShowTarget();
     }
 
@@ -28,6 +33,9 @@ public class SkyboxController : MonoBehaviour
         RenderSettings.skybox = skyboxes[currentSkyboxIndex];
         target.SetActive(staticSkybox);
         runningTarget.SetActive(runningSkybox);
+        target_1.SetActive(staticSkybox);
+        runningTarget_1.SetActive(runningSkybox);
+
         obstacle.SetActive(showObstacle);
     }
 
