@@ -17,6 +17,8 @@
 
 ### 视频
 
+[Unity第一人称射箭游戏——算什么男人！](https://www.bilibili.com/video/BV1134y1w7N5/?vd_source=212ff176b778171e26249f81cfb5bdbc)
+
 ### 地形
 
 使用地形组件，纹理使用Standard Assets -> Environment -> TerrainAssets -> SurfaceTextures -> GrassHillAIbedo，树使用Standard Assets -> Environment -> SpeedTree里面三种树。
