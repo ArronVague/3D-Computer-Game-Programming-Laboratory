@@ -119,23 +119,29 @@ public class SkyboxController : MonoBehaviour
 
 ![target](pic/target.png)
 
-场景里的两个红色靶标
+场景里的两个红色的固定靶标。
 
 ![index_2](pic/index_2.png)
 
 运动靶
 
-有一个以上运动靶标，运动轨迹，速度使用动画控制。运动靶标制作成蓝色的圆柱体预制件，并且由不同的动画控制器控制不同的动画。
+有一个以上运动靶标，运动轨迹，速度使用动画控制。运动靶标制作成蓝色的圆柱体预制件，并且由不同的动画控制器控制不同的动画。Animation无非就是改了x, y坐标，这里只展示一个。
 
 ![running_target](pic/running_target.png)
 
-RunningTarget的动画
+![animation](assets/animation.png)
 
-RunningTarget_1的动画
+两个运动靶的运动轨迹效果：
+
+![](pic/running_target.gif)
 
 射击位
 
-地图上用“Press 'E' to play game”标记了两个射击位，仅对准标记按下“E”箭后可以拉弓射击，每个位置有无限次机会。
+地图上用“Press 'E' to play game”标记了两个射击位，仅对准标记按下“E”箭后可以拉弓射击，每个位置有无限次机会。这里最好用gif。
+
+![press_1](assets/press_1.png)
+
+![press_2](assets/press_2.png)
 
 驽弓动画
 
@@ -143,17 +149,27 @@ RunningTarget_1的动画
 
 点击左键后开始蓄力拉弓（注意是点击，无需持续按压），然后点击右键hold（无论是否蓄满都需要），最后点击左键发射。箭发射的力度也会随着蓄力程度变化。
 
+蓄满力的效果
+
+![full_power](pic/full_power.gif)
+
+没有蓄满力的效果
+
+![half_power](pic/half_power.gif)
+
 游走
 
 玩家的驽弓可在地图上游走，不能碰上树和靶标等障碍。
 
 使用了Standard Assets -> Characters -> FirstPersonCahracter -> Prefabs -> FPSController.prefab。游戏开始时动态加载弩弓，由于没有设置弩弓的碰撞器，仅使用了第一人称自带的碰撞器，因此会出现弩弓穿模的现象，不过问题不大。
 
+![collision](pic/collision.gif)
+
 碰撞与计分
 
 射中靶标获得一分。
 
-
+![score](pic/score.gif)
 
 参考文献
 
