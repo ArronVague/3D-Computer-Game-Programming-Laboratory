@@ -22,6 +22,8 @@
 - 改正交投影（Camera Projection）
 - Camera摄像机的使用
 - Has Exit Time
+- 飘雪
+- 火焰尾巴
 
 ## 一些吐槽
 
