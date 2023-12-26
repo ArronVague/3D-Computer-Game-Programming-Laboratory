@@ -13,7 +13,6 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
         // EDITOR_MOBILE_INPUT : denotes that mobile input should be used in editor, if a mobile build target is selected. (i.e. using Unity Remote app).
         // MOBILE_INPUT : denotes that mobile input should be used right now!
 
-        [Obsolete]
         static CrossPlatformInitialize()
         {
             var defines = GetDefinesList(buildTargetGroups[0]);
@@ -26,7 +25,6 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
 
 
         [MenuItem("Mobile Input/Enable")]
-        [Obsolete]
         private static void Enable()
         {
             SetEnabled("MOBILE_INPUT", true, true);
@@ -52,17 +50,14 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
 
 
         [MenuItem("Mobile Input/Enable", true)]
-        [Obsolete]
         private static bool EnableValidate()
         {
-            var defines = GetDefinesList(mobileBuildTargetGroups
-[0]);
+            var defines = GetDefinesList(mobileBuildTargetGroups[0]);
             return !defines.Contains("MOBILE_INPUT");
         }
 
 
         [MenuItem("Mobile Input/Disable")]
-        [Obsolete]
         private static void Disable()
         {
             SetEnabled("MOBILE_INPUT", false, true);
@@ -79,11 +74,9 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
 
 
         [MenuItem("Mobile Input/Disable", true)]
-        [Obsolete]
         private static bool DisableValidate()
         {
-            var defines = GetDefinesList(mobileBuildTargetGroups
-[0]);
+            var defines = GetDefinesList(mobileBuildTargetGroups[0]);
             return defines.Contains("MOBILE_INPUT");
         }
 
@@ -94,7 +87,7 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
                 BuildTargetGroup.Android,
                 BuildTargetGroup.iOS
             };
-        [Obsolete]
+
         private static BuildTargetGroup[] mobileBuildTargetGroups = new BuildTargetGroup[]
             {
                 BuildTargetGroup.Android,
@@ -105,7 +98,7 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
                 BuildTargetGroup.WSA 
             };
 
-        [Obsolete]
+
         private static void SetEnabled(string defineName, bool enable, bool mobile)
         {
             //Debug.Log("setting "+defineName+" to "+enable);
